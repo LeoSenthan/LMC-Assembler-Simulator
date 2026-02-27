@@ -1,3 +1,9 @@
+import sys
+if len(sys.argv) != 2:
+    raise ValueError("Only Arguement To Be Passed Is Source Code File Path")
+else:
+    filename = sys.argv[1]
+
 opcodes = {
     "LDA": 5,
     "STA": 3,
@@ -174,5 +180,5 @@ class Compiler:
         self.memory_dump()
 
 
-compiler = Compiler("source_code.txt")
+compiler = Compiler(filename)
 compiler.compile()
