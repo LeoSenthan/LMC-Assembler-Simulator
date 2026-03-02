@@ -8,7 +8,7 @@ opcodes = {
     "SUB": 2,
     "INP": 901,
     "OUT": 902,
-    "END": 0,
+    "HLT": 0,
     "BRA": 6,
     "BRZ": 7,
     "BRP": 8,
@@ -109,7 +109,7 @@ class Compiler:
 
             opcode_token = tokens[0]
 
-            if opcode_token in ["INP", "OUT", "END"]:
+            if opcode_token in ["INP", "OUT", "HLT"]:
                 compiled_line = self.encode_zero_operand(opcode_token)
             elif opcode_token == "DAT":
                 value = tokens[1] if len(tokens) > 1 else "0"

@@ -81,9 +81,8 @@ The compiler and simulator will raise descriptive errors for:
 - Invalid opcode execution
 
 # Contribution/Extensions
-
-Add more LMC instructions or extensions
 Add unit tests
+Add more LMC instructions or extensions
 Enhance debugging output
 
 # License

@@ -131,7 +131,10 @@ class LMC:
                 self.ACC = int(value)
 
             case Opcode.OUT:
-                print("ACC: "+str(self.ACC))
+                if self.ACC < 500:
+                    print("ACC: "+str(self.ACC ))
+                else:
+                    print("ACC: -"+str(1000 - self.ACC))
 
             case Opcode.BRA:
                 self.PC = operand

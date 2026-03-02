@@ -1,0 +1,2 @@
+from LMCCompiler import Compiler
+
