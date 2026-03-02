@@ -10,6 +10,7 @@ This project allows you to write LMC assembly language programs, compile them to
 - Handles memory allocation for DAT variables.
 - Detects duplicate labels, missing operands, and invalid operands with descriptive error messages.
 - Optional memory dump for debugging compiled code.
+- Allows comments using //
 
 ## LMC Simulator
 - Executes compiled machine code files.
