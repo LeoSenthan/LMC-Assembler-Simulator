@@ -134,7 +134,7 @@ class LMC:
                 if self.ACC < 500:
                     print("ACC: "+str(self.ACC ))
                 else:
-                    print("ACC: -"+str(1000 - self.ACC))
+                    print("ACC: OVERFLOW")
 
             case Opcode.BRA:
                 self.PC = operand
