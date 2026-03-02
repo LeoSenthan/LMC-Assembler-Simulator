@@ -122,6 +122,8 @@ class Compiler:
 
             self.compiled_code += compiled_line
             current_address += 1
+        if len(self.compiled_code) // 3 > 100:
+            raise ValueError("Program exceeds 100 memory locations.")
 
     def memory_dump(self):
         """Prints compiled machine code in readable format with line numbers and labels."""

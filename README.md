@@ -12,6 +12,12 @@ This project allows you to write LMC assembly language programs, compile them to
 - Optional memory dump for debugging compiled code.
 - Allows comments using //
 
+### Compiler Design
+
+The compiler uses a two-pass architecture:
+1. First pass: resolve labels and assign memory addresses.
+2. Second pass: encode instructions into machine code.
+
 ## LMC Simulator
 - Executes compiled machine code files.
 - Step-by-step execution mode with program counter and accumulator display.
@@ -26,6 +32,8 @@ LMC/
 ├── machine_code/      # Folder where compiled machine code is saved
 ├── LMC.py             # Simulator (interpreter) implementation
 ├── Compiler.py        # LMC compiler/assembler
+├──TestLMC.py          # Unit tests for LMC simulator
+├──TestLMCCompiler.py  # Unit tests for LMC compiler
 └── README.md          # This file
 
 # Requirements
@@ -80,6 +88,37 @@ The compiler and simulator will raise descriptive errors for:
 - Invalid operand values (not a number or undefined label)
 - Exceeding memory limits
 - Invalid opcode execution
+
+# Testing
+
+This project includes comprehensive unit tests for both the compiler and simulator.
+
+Test Coverage
+
+Each main LMC instruction (ADD, SUB, STA, LDA, BRA, BRZ, BRP) has dedicated unit tests.
+
+Compiler tests validate:
+- Correct machine code generation
+- Label resolution
+- DAT memory allocation
+- Error handling (duplicate labels, invalid operands, etc.)
+
+Simulator tests validate:
+- Correct instruction execution
+- Program counter behavior
+- Accumulator updates
+- Branching logic
+
+
+Test Files
+TestLMC.py — Tests for the simulator
+TestLMCCompiler.py — Tests for the compiler
+
+## How To Run
+Terminal
+
+python TestLMC.py
+python TestLMCCompiler.py
 
 # Contribution/Extensions
 Add unit tests
