@@ -1,8 +1,14 @@
 # Little Man Computer (LMC) Simulator & Compiler
-A Python implementation of the Little Man Computer (LMC), including both a compiler/assembler and a machine code simulator.
-This project allows you to write LMC assembly language programs, compile them to machine code, and execute them step by step with optional debugging.
+Python implementation of the Little Man Computer (LMC) with a full assembler and simulator, including step-by-step execution and debugging features.
 
 # Features
+
+## Highlights
+- Full LMC compiler + simulator in Python
+- Step-by-step execution with accumulator and memory view
+- Input/output support (INP/OUT)
+- Robust error handling for invalid instructions and memory limits
+- Fully tested with unit tests for each instruction
 
 ## LMC Compiler
 - Converts LMC assembly language source code (.asm) into 3-digit machine code.
